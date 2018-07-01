@@ -1,23 +1,23 @@
 // Select color input
 // Select size input
 
-const heightInput = $("#inputHeight");
-const widthInput = $("#inputWidth");
-const colorInput = $("#colorPicker");
+var heightInput = $("#inputHeight");
+var widthInput = $("#inputWidth");
+var colorInput = $("#colorPicker");
 
 // When size is submitted by the user, call makeGrid()
 function makeGrid() {
-  let heightValue = heightInput.val();
-  let widthValue = widthInput.val();
-  let pixelCanvas = $("#pixelCanvas");
+  var heightValue = heightInput.val();
+  var widthValue = widthInput.val();
+  var pixelCanvas = $("#pixelCanvas");
 
   pixelCanvas.children().remove(); // clears previously built table if any
 
   // grid is built
-  for (let h = 0; h < heightValue; h++) {
+  for (var h = 0; h < heightValue; h++) {
     pixelCanvas.append("<tr></tr>");
 
-    for (let w = 0; w < widthValue; w++) {
+    for (var w = 0; w < widthValue; w++) {
       $(pixelCanvas.children()[h]).append("<td></td>");
     }
   }
